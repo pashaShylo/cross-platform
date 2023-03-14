@@ -1,7 +1,8 @@
 import {StyleSheet, Text, View, TextInput, ScrollView, Pressable} from 'react-native';
 import React, {useState} from 'react';
-import {COLORS} from '../constants';
+import {COLORS} from '../../constants';
 import _ from 'lodash'
+import Header from '../../components/header'
 
 const Task2 = () => {
   const [firstInput, setFirstInput] = useState()
@@ -19,18 +20,18 @@ const Task2 = () => {
   }
 
   return (
-    <ScrollView
-      style={{
-        flex: 1,
-        backgroundColor: COLORS.bgColor,
-      }}>
-        <TextInput style={{backgroundColor: 'white', margin: 15, fontSize: 20, padding: 5, }} placeholder='Input number' onChangeText={text => setFirstInput(parseInt(text))}/>
-        <TextInput style={{backgroundColor: 'white', margin: 15, fontSize: 20, padding: 5, }} placeholder='Input number' onChangeText={text => setSecondInput(parseInt(text))}/>
-        <Pressable style={({pressed}) => [{backgroundColor: pressed ? '#66a3ff' : '#0066ff'}, styles.button]} onPress={calculate}>
-          <Text style={styles.text}>Click</Text>
-        </Pressable>
-        <Text style={styles.res}>{res}</Text>
-    </ScrollView>
+      <ScrollView
+        style={{
+          flex: 1,
+          backgroundColor: COLORS.bgColor,
+        }}>
+          <TextInput style={{backgroundColor: 'white', margin: 15, fontSize: 20, padding: 5, }} placeholder='Input number' onChangeText={text => setFirstInput(parseInt(text))}/>
+          <TextInput style={{backgroundColor: 'white', margin: 15, fontSize: 20, padding: 5, }} placeholder='Input number' onChangeText={text => setSecondInput(parseInt(text))}/>
+          <Pressable style={({pressed}) => [{backgroundColor: pressed ? '#66a3ff' : '#0066ff'}, styles.button]} onPress={calculate}>
+            <Text style={styles.text}>Click</Text>
+          </Pressable>
+          <Text style={styles.res}>{res}</Text>
+      </ScrollView>
   );
 };
 

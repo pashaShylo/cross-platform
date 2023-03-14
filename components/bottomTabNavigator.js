@@ -2,9 +2,9 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {StyleSheet} from 'react-native';
 import {COLORS, ROUTES} from '../constants';
-import Task1 from '../screens/Task1';
-import Task2 from '../screens/Task2';
-import Task3 from '../screens/Task3';
+import Task1 from '../screens/lab1/Task1';
+import Task2 from '../screens/lab1/Task2';
+import Task3 from '../screens/lab1/Task3';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { View, Text } from 'react-native';
 

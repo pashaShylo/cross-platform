@@ -9,7 +9,7 @@ const Wallet = () => {
     <View
       style={{        
         backgroundColor: 'white',
-        paddingTop: insets.top,
+        // paddingTop: insets.top,
         alignItems: 'center'
       }}>
       <Text style={{

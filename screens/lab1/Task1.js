@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View, TextInput, ScrollView, Pressable} from 'react-native';
 import React, {useState} from 'react';
-import {COLORS} from '../constants';
-
+import {COLORS} from '../../constants';
+import Header from '../../components/header'
 const Task1 = () => {
   const [firstInput, setFirstInput] = useState()
   const [secondInput, setSecondInput] = useState()
@@ -26,19 +26,19 @@ const Task1 = () => {
     }
   }
   return (
-    <ScrollView
-      style={{
-        flex: 1,
-        backgroundColor: COLORS.bgColor,
-      }}>
-        <TextInput style={{backgroundColor: 'white', margin: 15, fontSize: 20, padding: 5, }} placeholder='Input number' onChangeText={text => setFirstInput(parseInt(text))}/>
-        <TextInput style={{backgroundColor: 'white', margin: 15, fontSize: 20, padding: 5, }} placeholder='Input number' onChangeText={text => setSecondInput(parseInt(text))}/>
-        <TextInput style={{backgroundColor: 'white', margin: 15, fontSize: 20, padding: 5, }} placeholder='Input number' onChangeText={text => setThirdInput(parseInt(text))}/>
-        <Pressable style={({pressed}) => [{backgroundColor: pressed ? '#66a3ff' : '#0066ff'}, styles.button]} onPress={calculate}>
-          <Text style={styles.text}>Click</Text>
-        </Pressable>
-        <Text style={styles.res}>{res ? 'Result =' + res : null}</Text>
-    </ScrollView>
+      <ScrollView
+        style={{
+          flex: 1,
+          backgroundColor: COLORS.bgColor,
+        }}>
+          <TextInput style={{backgroundColor: 'white', margin: 15, fontSize: 20, padding: 5, }} placeholder='Input number' onChangeText={text => setFirstInput(parseInt(text))}/>
+          <TextInput style={{backgroundColor: 'white', margin: 15, fontSize: 20, padding: 5, }} placeholder='Input number' onChangeText={text => setSecondInput(parseInt(text))}/>
+          <TextInput style={{backgroundColor: 'white', margin: 15, fontSize: 20, padding: 5, }} placeholder='Input number' onChangeText={text => setThirdInput(parseInt(text))}/>
+          <Pressable style={({pressed}) => [{backgroundColor: pressed ? '#66a3ff' : '#0066ff'}, styles.button]} onPress={calculate}>
+            <Text style={styles.text}>Click</Text>
+          </Pressable>
+          <Text style={styles.res}>{res ? 'Result =' + res : null}</Text>
+      </ScrollView>
   );
 };
 
