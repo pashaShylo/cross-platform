@@ -1,10 +1,7 @@
 import {Text, View} from 'react-native';
 import React from 'react';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
-const Wallet = () => {
-    const insets = useSafeAreaInsets()
-
+const Header = ({labNum}) => {
   return (
     <View
       style={{        
@@ -14,7 +11,7 @@ const Wallet = () => {
       }}>
       <Text style={{
         fontSize: 20
-      }}>Лабораторна робота №1</Text>
+      }}>Лабораторна робота №{labNum}</Text>
       <Text style={{
         fontSize: 20,
         paddingBottom: 5
@@ -23,4 +20,4 @@ const Wallet = () => {
   );
 };
 
-export default Wallet;
+export default Header;

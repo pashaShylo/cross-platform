@@ -2,7 +2,6 @@ import {StyleSheet, Text, View, TextInput, ScrollView, Pressable} from 'react-na
 import React, {useState} from 'react';
 import {COLORS} from '../../constants';
 import _ from 'lodash'
-import Header from '../../components/header'
 
 const Task2 = () => {
   const [firstInput, setFirstInput] = useState()

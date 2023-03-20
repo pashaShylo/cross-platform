@@ -4,7 +4,7 @@ import _ from 'lodash'
 import {
   LineChart,
 } from "react-native-chart-kit";
-
+import Header from '../../components/header';
 const Lab2 = () => {
 
   const [Xn, setXn] = useState('-5.74')
@@ -42,20 +42,7 @@ const Lab2 = () => {
 
   return (
     <>
-     <View
-      style={{        
-        backgroundColor: 'white',
-        // paddingTop: insets.top,
-        alignItems: 'center'
-      }}>
-      <Text style={{
-        fontSize: 20
-      }}>Лабораторна робота №2</Text>
-      <Text style={{
-        fontSize: 20,
-        paddingBottom: 5
-      }}>Виконав Шило Павло</Text>
-    </View>
+    <Header labNum={2}/>
     <ScrollView style={{
           flex: 1,
           backgroundColor: '#82ccdd',
